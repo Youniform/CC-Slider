@@ -43,7 +43,6 @@ class Grid extends React.Component {
 				<div className="grid">
 					{tiles}
 				</div>
-				<button onClick={ () => this.autoSolve()} type="button" id="autosolve-button"><span id="solve-top">Auto Solve</span><span id="solve-bottom">CHEATER</span></button>
 			</div>
 			);
 	}
@@ -52,12 +51,10 @@ class Grid extends React.Component {
 	{
 
 		let cells = this.cells.slice();
-		let indexCounter = 0;
 		for (let tile of Tile.instances) {
 				const cellIndex = Math.floor(Math.random() * cells.length);
 				tile.setState(cells.splice(cellIndex, 1)[0]);
 			}
-			indexCounter++;
 	}
 }
 

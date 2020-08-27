@@ -7,6 +7,7 @@ class Tile extends React.Component {
 		super(props);
 		Tile.instances.push(this);
 		this.props = props;
+		this.destination = props.destination;
 		this.state = {
 			x: 0,
 			y: 0
@@ -19,7 +20,6 @@ class Tile extends React.Component {
 		const height = `${Tile.size}px`;
 		const top = `${this.state.y * Tile.size}px`;
 		const left = `${this.state.x * Tile.size}px`;
-		const display = this.props.display;
 		const backgroundImage = `url('img/${this.props.destination.x}_${this.props.destination.y}.png')`;
 		return(
 			<div className='tile'
