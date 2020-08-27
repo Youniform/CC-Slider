@@ -1,0 +1,17 @@
+.App {
+
+}
+
+.tile {
+	position:absolute;
+	box-sizing:border-box;
+	border:1px solid black;
+}
+
+.game {
+	width:400px;
+	height:400px;
+	margin:0 auto;
+	position:relative;
+	display:block;
+}
